@@ -50,6 +50,7 @@ class Medicine{
 		{
 			String medicine=this.medicines[j];
 			System.out.println(medicine);
+			System.out.println();
 		}
 	}
 	}
