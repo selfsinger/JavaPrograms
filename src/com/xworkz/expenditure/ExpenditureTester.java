@@ -27,106 +27,119 @@ public class ExpenditureTester {
 		System.out.println(dao.create(dto1));
 		
 		System.out.println();
-		dto.setPersonName("Chetu");
-		dto.setSpentOn("Aari Needles");
-		dto.setAmount(2500);
-		dto.setTax(5);
-		dto.setExpenditurePeriod(ExpenditurePeriod.MONTHLY);
-		System.out.println(dao.create(dto));
+		ExpenditureDTO dto2 = new ExpenditureDTO();
+		dto2.setPersonName("Chetu");
+		dto2.setSpentOn("Aari Needles");
+		dto2.setAmount(2500);
+		dto2.setTax(5);
+		dto2.setExpenditurePeriod(ExpenditurePeriod.MONTHLY);
+		System.out.println(dao.create(dto2));
 		
 		System.out.println();
-		dto1.setPersonName("Chandana");
-		dto1.setSpentOn("shirt");
-		dto1.setAmount(1000);
-		dto1.setTax(5);
-		dto1.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto3 = new ExpenditureDTO();
+		dto3.setPersonName("Chandana");
+		dto3.setSpentOn("shirt");
+		dto3.setAmount(1000);
+		dto3.setTax(5);
+		dto3.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
+		System.out.println(dao.create(dto3));
 		
 		System.out.println();
-		dto1.setPersonName("Pinkuu");
-		dto1.setSpentOn("veena");
-		dto1.setAmount(15500);
-		dto1.setTax(18);
-		dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto4 = new ExpenditureDTO();
+		dto4.setPersonName("Pinkuu");
+		dto4.setSpentOn("veena");
+		dto4.setAmount(15500);
+		dto4.setTax(18);
+		dto4.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto4));
 		
 		System.out.println();
-		dto1.setPersonName("Purnu");
-		dto1.setSpentOn("sweatPants");
-		dto1.setAmount(2000);
-		dto1.setTax(15);
-		dto1.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto5 = new ExpenditureDTO();
+		dto5.setPersonName("Purnu");
+		dto5.setSpentOn("sweatPants");
+		dto5.setAmount(2000);
+		dto5.setTax(15);
+		dto5.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
+		System.out.println(dao.create(dto5));
 		
 		System.out.println();
-		dto1.setPersonName("Sumanth");
-		dto1.setSpentOn("books");
-		dto1.setAmount(500);
-		dto1.setTax(4);
-		dto1.setExpenditurePeriod(ExpenditurePeriod.MONTHLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto6 = new ExpenditureDTO();
+		dto6.setPersonName("Sumanth");
+		dto6.setSpentOn("books");
+		dto6.setAmount(500);
+		dto6.setTax(4);
+		dto6.setExpenditurePeriod(ExpenditurePeriod.MONTHLY);
+		System.out.println(dao.create(dto6));
 		
 		System.out.println();
-		dto1.setPersonName("sharanya");dto1.setSpentOn("tradOutfits");dto1.setAmount(3000);dto1.setTax(17);dto1.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto7 = new ExpenditureDTO();
+		dto7.setPersonName("sharanya");dto7.setSpentOn("tradOutfits");dto7.setAmount(3000);dto7.setTax(17);dto7.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
+		System.out.println(dao.create(dto7));
 		
 		System.out.println();
-		dto1.setPersonName("Shashank");dto1.setSpentOn("watch");dto1.setAmount(3500);dto1.setTax(16);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto8 = new ExpenditureDTO();
+		dto8.setPersonName("Shashank");dto8.setSpentOn("watch");dto8.setAmount(3500);dto8.setTax(16);dto8.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto8));
 		
 		System.out.println();
-		dto1.setPersonName("Renuka");dto1.setSpentOn("denim");dto1.setAmount(4000);dto1.setTax(19);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto9 = new ExpenditureDTO();
+		dto9.setPersonName("Renuka");dto9.setSpentOn("denim");dto9.setAmount(4000);dto9.setTax(19);dto9.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto9));
 		
 		System.out.println();
-		dto1.setPersonName("sahana");dto1.setSpentOn("sarree");dto1.setAmount(5000);dto1.setTax(20);dto1.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto10 = new ExpenditureDTO();
+		dto10.setPersonName("sahana");dto10.setSpentOn("sarree");dto10.setAmount(5000);dto10.setTax(20);dto10.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
+		System.out.println(dao.create(dto10));
 		
 		System.out.println();
-		dto1.setPersonName("sandeep");dto1.setSpentOn("mobile");dto1.setAmount(20000);dto1.setTax(25);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto11 = new ExpenditureDTO();
+		dto11.setPersonName("sandeep");dto11.setSpentOn("mobile");dto11.setAmount(20000);dto11.setTax(25);dto11.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto11));
 		
 		System.out.println();
-		dto1.setPersonName("Bharati");dto1.setSpentOn("SportsShoes");dto1.setAmount(6000);dto1.setTax(20);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto12 = new ExpenditureDTO();
+		dto12.setPersonName("Bharati");dto12.setSpentOn("SportsShoes");dto12.setAmount(6000);dto12.setTax(20);dto12.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto12));
 		
 		System.out.println();
-		dto1.setPersonName("manjushree");dto1.setSpentOn("ornaments");dto1.setAmount(2000);dto1.setTax(13);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto13 = new ExpenditureDTO();
+		dto13.setPersonName("manjushree");dto13.setSpentOn("ornaments");dto13.setAmount(2000);dto13.setTax(13);dto13.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto13));
 		
 		System.out.println();
-		dto1.setPersonName("netra");dto1.setSpentOn("silver");dto1.setAmount(4000);dto1.setTax(21);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto14 = new ExpenditureDTO();
+		dto14.setPersonName("netra");dto14.setSpentOn("silver");dto14.setAmount(4000);dto14.setTax(21);dto14.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto14));
 		
 		System.out.println();
-		dto1.setPersonName("sheela");dto1.setSpentOn("sandals");dto1.setAmount(2300);dto1.setTax(14);dto1.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto15 = new ExpenditureDTO();
+		dto15.setPersonName("sheela");dto15.setSpentOn("sandals");dto15.setAmount(2300);dto15.setTax(14);dto15.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
+		System.out.println(dao.create(dto15));
 		
 		System.out.println();
-		dto1.setPersonName("Neela");dto1.setSpentOn("toys");dto1.setAmount(1300);dto1.setTax(8);dto1.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto16 = new ExpenditureDTO();
+		dto16.setPersonName("Neela");dto16.setSpentOn("toys");dto16.setAmount(1300);dto16.setTax(8);dto16.setExpenditurePeriod(ExpenditurePeriod.QUATERLY);
+		System.out.println(dao.create(dto16));
 		
 		System.out.println();
-		dto1.setPersonName("Mamatha");dto1.setSpentOn("Groceries");dto1.setAmount(5000);dto1.setTax(12);dto1.setExpenditurePeriod(ExpenditurePeriod.MONTHLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto17 = new ExpenditureDTO();
+		dto17.setPersonName("Mamatha");dto17.setSpentOn("Groceries");dto17.setAmount(5000);dto17.setTax(12);dto17.setExpenditurePeriod(ExpenditurePeriod.MONTHLY);
+		System.out.println(dao.create(dto17));
 		
 		System.out.println();
-		dto1.setPersonName("Chitra");dto1.setSpentOn("homeDeco");dto1.setAmount(5000);dto1.setTax(17);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto18 = new ExpenditureDTO();
+		dto18.setPersonName("Chitra");dto18.setSpentOn("homeDeco");dto18.setAmount(5000);dto18.setTax(17);dto18.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto18));
 		
 		System.out.println();
-		dto1.setPersonName("Satish");dto1.setSpentOn("camera");dto1.setAmount(50000);dto1.setTax(30);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
+		ExpenditureDTO dto19 = new ExpenditureDTO();
+		dto19.setPersonName("Satish");dto19.setSpentOn("camera");dto19.setAmount(50000);dto19.setTax(30);dto19.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto19));
 		
 		System.out.println();
-		dto1.setPersonName("Pushpa");dto1.setSpentOn("jewels");dto1.setAmount(10000);dto1.setTax(34);dto1.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
-		System.out.println(dao.create(dto1));
-		
-		
-		
-
-
-
+		ExpenditureDTO dto20 = new ExpenditureDTO();
+		dto20.setPersonName("Pushpa");dto20.setSpentOn("jewels");dto20.setAmount(10000);dto20.setTax(34);dto20.setExpenditurePeriod(ExpenditurePeriod.YEARLY);
+		System.out.println(dao.create(dto20));
 
 	}
 
