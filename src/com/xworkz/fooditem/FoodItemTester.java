@@ -36,68 +36,68 @@ public class FoodItemTester {
 		System.out.println(list.size());
 
 		System.out.println("1.Displaying all items");
-		list.forEach(foodItems -> System.out.println(foodItems));
+		list.forEach(System.out::println);
 
 		System.out.println("----------------------------------------------------------------");
 		System.out.println("2.Filtering items by non veg type");
 		list.stream().filter(food -> food.getType().equals(FoodType.NON_VEG)).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("------------------------------------------------------------------");
 		System.out.println("3.Here prninting details where food price is greater than 50");
 		list.stream().filter(food -> food.getPrice() > 50).map(food -> food.getPrice()).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("4.Here getting the hotel names where price greater than 50");
 		list.stream().filter(food -> food.getPrice() > 50).map(food -> food.getHotelName()).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("5.Getting  sorted hotel names, where price is greater than 50");
 		list.stream().filter(food -> food.getPrice() > 50).map(food -> food.getHotelName()).sorted()
-				.collect(Collectors.toList()).forEach(print -> System.out.println(print));
+				.collect(Collectors.toList()).forEach(System.out::println);
 
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("6.Getting sorted(ascending) food names");
 		list.stream().map(food -> food.getName()).sorted().collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("7.Getting only id's sorted in descending order");
 		list.stream().sorted((x, y) -> y.getId().compareTo(x.getId())).map(food -> food.getId())
-				.collect(Collectors.toList()).forEach(print -> System.out.println(print));
+				.collect(Collectors.toList()).forEach(System.out::println);
 
 		System.out.println("--------------------------------------------------------------------");
 		System.out.println("8.Getting items where hotel name in descending order");
 		list.stream().sorted((m, n) -> n.getHotelName().compareTo(m.getHotelName())).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("-------------------------------------------------------------------------");
 		System.out.println("9.Getting items by veg type and sorted food names in descdending order");
 		list.stream().filter(food -> food.getType().equals(FoodType.VEG))
 				.sorted((p, q) -> q.getName().compareTo(p.getName())).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+				.forEach(System.out::println);
 
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("10.Here sorting names in ascending order");
 		list.stream().map(food -> food.getName()).sorted().collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("11.Here sorting qunatity in descending order");
 		list.stream().sorted((m, n) -> n.getQuantity().compareTo(m.getQuantity())).map(food -> food.getQuantity())
-				.collect(Collectors.toList()).forEach(print -> System.out.println(print));
+				.collect(Collectors.toList()).forEach(System.out::println);
 
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("12.Getting only food names in uppercase");
 		list.stream().map(food -> food.getName().toUpperCase()).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+		.forEach(System.out::println);
 
 		System.out.println("------------------------------------------------------------------------");
 		System.out.println("13.Getting only hotel names in uppercase ");
 		list.stream().map(food -> food.getHotelName().toUpperCase()).collect(Collectors.toList())
-				.forEach(print -> System.out.println(print));
+				.forEach(System.out::println);
 	}
 
 }
