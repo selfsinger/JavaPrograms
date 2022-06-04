@@ -2,18 +2,24 @@ package com.xworkz.institute.dao;
 
 import java.sql.*;
 
-import static com.xworkz.institute.constants.DBConstants.*;
+import javax.sql.DataSource;
+
 import com.xworkz.institute.dto.CourseDTO;
 
 public class CourseDAOImpl implements CourseDAO {
 
+	private DataSource dataSource;
+	
+	public CourseDAOImpl(DataSource dataSource) {
+		this.dataSource=dataSource;
+	}
 	@Override
 	public boolean saveTheData(CourseDTO dto) {
 		// System.out.println("saving".concat(dto.toString()));
 
 		String insertQuery = "insert into course_details values(?,?,?,?,?,?)";
-		try (Connection con = DriverManager.getConnection(URL.value, USERNAME.value, PASSWORD.value);
-				PreparedStatement statement = con.prepareStatement(insertQuery)) {
+		try (Connection connection = this.dataSource.getConnection();
+				PreparedStatement statement = connection.prepareStatement(insertQuery)) {
 			System.out.println("inserting sql:" + insertQuery);
 
 			statement.setInt(1, dto.getId());

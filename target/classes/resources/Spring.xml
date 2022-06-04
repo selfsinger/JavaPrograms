@@ -5,10 +5,22 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
         
-        <bean class="com.xworkz.institute.dao.CourseDAOImpl" id="courseDAOImpl"></bean>
+        <bean class="com.xworkz.institute.dao.CourseDAOImpl" id="courseDAOImpl">
+        <constructor-arg ref="driverManagerDataSource"/>
+        </bean>
         
         
         <bean class="com.xworkz.institute.service.CourseServiceImpl" id="courseServiceImpl">
         <constructor-arg ref="courseDAOImpl"/>
+        </bean>
+        
+        <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="driverManagerDataSource">
+        <constructor-arg value="${jdbc.url}" />
+        <constructor-arg value="${jdbc.userName}"/>
+        <constructor-arg value="${jdbc.password}"/>
+        </bean>
+        
+        <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer" id="propertySourcesPlaceholderConfigurer">
+        <property name="Location" value="resources/application.properties"/>
         </bean>
 </beans>
