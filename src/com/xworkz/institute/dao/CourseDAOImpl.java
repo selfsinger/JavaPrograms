@@ -9,10 +9,11 @@ import com.xworkz.institute.dto.CourseDTO;
 public class CourseDAOImpl implements CourseDAO {
 
 	private DataSource dataSource;
-	
+
 	public CourseDAOImpl(DataSource dataSource) {
-		this.dataSource=dataSource;
+		this.dataSource = dataSource;
 	}
+
 	@Override
 	public boolean saveTheData(CourseDTO dto) {
 		// System.out.println("saving".concat(dto.toString()));
@@ -30,9 +31,8 @@ public class CourseDAOImpl implements CourseDAO {
 			statement.setBoolean(6, dto.getFree());
 
 			int rowsAffected = statement.executeUpdate();
-			System.out.println("affected rows:"+rowsAffected);
+			System.out.println("affected rows:" + rowsAffected);
 			return rowsAffected > 0 ? true : false;
-			
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

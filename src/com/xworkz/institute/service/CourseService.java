@@ -4,9 +4,9 @@ import com.xworkz.institute.dto.CourseDTO;
 
 public interface CourseService {
 	
-	boolean validate(CourseDTO dto) ;
+	boolean checkAndSave(CourseDTO dto) ;
 	
-	 boolean saveTheData(CourseDTO dto) ;
+
 	 }
 
 

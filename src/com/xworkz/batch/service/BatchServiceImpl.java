@@ -8,7 +8,7 @@ import com.xworkz.batch.dto.BatchDTO;
 
 public class BatchServiceImpl implements BatchService {
 
-	BatchDAO dao ;
+	BatchDAO dao =new BatchDAOImpl();
 
 	@Override
 	public boolean validate(BatchDTO dto)  {
@@ -32,7 +32,7 @@ LocalDate date=dto.getStartDate();
 	public boolean save(BatchDTO dto){
 		if (validate(dto)) {
 			System.out.println("data is saved(stored)");
-			return  new BatchDAOImpl().save(dto);
+			return  dao.save(dto);
 		}
 		return false;
 	}

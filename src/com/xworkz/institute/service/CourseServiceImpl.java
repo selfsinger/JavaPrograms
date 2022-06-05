@@ -10,37 +10,46 @@ public class CourseServiceImpl implements CourseService {
 	private CourseDAO dao;
 
 	public CourseServiceImpl(CourseDAO dao) {
-		super();
+
 		this.dao = dao;
 	}
 
 	@Override
-	public boolean validate(CourseDTO dto) {
+	public boolean checkAndSave(CourseDTO dto) {
 		if (dto != null) {
 			Float time = dto.getDuration();
-			LocalDate greaterthansevendays = LocalDate.now().plusDays(7);
+			LocalDate moreThanSixDays = LocalDate.now().plusDays(6);
 
-			System.out.println("Here validating details of course...");
-			if (dto.getId() > 0 && dto.getCourseName() != null
-					&& (dto.getCourseName().length() >= 3 && dto.getCourseName().length() < 30 && time > 0 && time < 6
-							&& dto.getFees() >= 0 && dto.getFees() <= 50000)
-					&& dto.getStartDate().isAfter(greaterthansevendays)) {
-				System.out.println("validation successfull");
-				return true;
-			} else {
-				System.out.println("not successfull");
+			System.out.println("Here checking details of course...");
+
+			if (!(dto.getId() > 0)) {
+				System.out.println("id is valid");
+				return false;
+			}
+			if (!(dto.getCourseName() != null && dto.getCourseName().length() >= 3
+					&& dto.getCourseName().length() < 30)) {
+				System.out.println("course name is valid ");
+				return false;
+			}
+			if (!(time > 0 && time < 6)) {
+				System.out.println("duration is valid");
+				return false;
+			}
+			if (!(dto.getFees() > 0 && dto.getFees() < 50000)) {
+				System.out.println("fees is valid");
+				return false;
+			}
+			if (!(dto.getStartDate().isAfter(moreThanSixDays))) {
+				System.out.println("date is valid");
 				return false;
 			}
 
 		}
-
+		boolean saved = dao.saveTheData(dto);
+		System.out
+				.println("Checking the details and after checking we are saving the data" + " " + dto + " \n" + saved);
 		return false;
 
-	}
-
-	@Override
-	public boolean saveTheData(CourseDTO dto) {
-		return dao.saveTheData(dto);
 	}
 
 }
